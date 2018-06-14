@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ 
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.apache.ignite.reproducers</groupId>
+  <artifactId>ignite-web-session-example</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Apache Ignite - Web Session Clustering Example</name>
+ 
+  <properties>
+    <jettyVersion>7.6.16.v20140903</jettyVersion>
+    <ignite.version>2.5.0</ignite.version>
+  </properties>
+ 
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>${jettyVersion}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.ignite</groupId>
+      <artifactId>ignite-core</artifactId>
+      <version> ${ignite.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.ignite</groupId>
+      <artifactId>ignite-web</artifactId>
+      <version> ${ignite.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.ignite</groupId>
+      <artifactId>ignite-log4j</artifactId>
+      <version>${ignite.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.ignite</groupId>
+      <artifactId>ignite-spring</artifactId>
+      <version>${ignite.version}</version>
+    </dependency>
+  </dependencies>
+ 
+  <build>
+    <plugins>
+      <plugin>
+        <!-- This plugin is needed for the servlet example -->
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jettyVersion}</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
